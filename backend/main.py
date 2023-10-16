@@ -1,6 +1,24 @@
+import asyncio
 import uvicorn
 from fastapi import FastAPI
 
+
+app = FastAPI()
+
+
+class App:
+    async def run() -> None:
+        config = uvicorn.Config(
+            app,
+            port=8000,
+            use_colors=True,
+            reload=True,
+            reload_delay=1,
+            log_level="info",
+        )
+        server = uvicorn.Server(config)
+        await server.serve()
+
+
 if __name__ == "__main__":
-    app = FastAPI()
-    uvicorn.run(app = "app", host = "localhost", port = 5000, reload = True)
+    asyncio.run(App.run())
