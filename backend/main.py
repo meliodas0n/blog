@@ -6,6 +6,11 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
+class View:
+    @app.get("/")
+    def main():
+        return {"Hello" : "World"}
+
 class App:
     async def run() -> None:
         config = uvicorn.Config(
