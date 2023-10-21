@@ -1,0 +1,10 @@
+{
+  "vim.disableExtension": true,
+  "editor.indentSize": "tabSize",
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.linkedEditing": true,
+}
