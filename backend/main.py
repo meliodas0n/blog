@@ -9,7 +9,8 @@ app = FastAPI()
 class View:
     @app.get("/")
     def main():
-        return {"Hello" : "World"}
+        return {"Hello": "World"}
+
 
 class App:
     async def run() -> None:
@@ -26,4 +27,4 @@ class App:
 
 
 if __name__ == "__main__":
-	asyncio.run(App.run())
+    asyncio.run(App.run())
